@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link href="/static/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      
+      <img class="navbar-brand" src="/static/logi.jpg" alt="MyLogo">
+    
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#welcome">Welcome</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+  <section id="welcome" style="height: 100vh; display: flex; justify-content: center; align-items: center;">
+    <div class="welcome-section">
+      <div class="welcome-content">
+        <h1 id="welcomeMessage">Welcome to Our Website</h1>
+        <p>Were glad to have you here. Explore and enjoy our services!</p>
+        <button id="getStartedButton">Get Started</button>
+      </div>
+    </div>
+    
+  </section>
+  <section id="about" style="height: 100vh; display: flex; justify-content: center; align-items: center;">
+   
+</section>
+  <section id="home" style="height: 100vh; display: flex; justify-content: center; align-items: center;">
+    
+    <div class="ppt">
+  
+    </div>  
+  </section>
+  <section id="contact" style="height: 100vh; display: flex; justify-content: center; align-items: center; background-color: #555;">
+    <div class="contact-section">
+      <div id="manoraj">
+      <form action="https://api.web3forms.com/submit" Method="POST">
+        <h3 id="love">Contact US</h3>
+   
+      <input type = "hidden" name="access_key" value="181b355f-c2b5-4aa0-a7b2-8bf727e96e15">
+      <input type = "text" name = "name"id="name" placeholder="Your Name" required>
+      <input type = "email" name="email" id="email" placeholder="Email Id" required>
+      <input type = "phone" name="phone" id="phone" placeholder="Phone No." required>
+      <br>
+      <button id="sub" type="submit">Submit</button>
+      </div>
+
+  </form></div>
+    </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/script.js"></script>
+</body>
+</html>

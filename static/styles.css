@@ -1,0 +1,273 @@
+.navbar {
+    background-color: transparent !important; 
+  }
+  
+  .navbar .nav-link {
+    color: black !important; 
+    font-weight: 500;
+    transition: color 0.3s ease;
+    
+  }
+  
+  .navbar .nav-link:hover {
+    color: #ffcc00 !important; 
+  }
+  
+  .navbar-brand {
+    height:5rem;
+    width:5rem;
+    color: white !important;
+  }
+  
+  body {
+    font-size:clamp(12px,2vw,24px);
+    overflow: auto;
+  }
+
+  #welcome{
+    
+    position: relative;
+    overflow: hidden;
+    
+  }
+  #welcome::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-image: url('vish.jpg');
+    background-size: cover;
+    filter:blur(4px);
+    z-index:-1;
+  }
+
+  /* Reset and Base Styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Welcome Section Styling */
+.welcome-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:white;
+  text-align: center;
+  text-shadow: 10px 10px 10px black;
+  position:relative;
+  
+
+}
+
+.welcome-content {
+  max-width: 600px;
+}
+
+h1 {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+  animation: fadeIn 2s ease-in-out;
+  
+
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color:aliceblue;
+}
+
+#getStartedButton {
+  padding: 0.8rem 1.5rem;
+  background-color:white;
+  color:#ff5f49;
+  position:relative;
+  border-radius: 10px;
+  font-size: 1rem;
+  border:2px solid #ff5f49;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+@property --angle{
+  syntax:"<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+#getStartedButton::after ,#getStartedButton::before{
+  content: '';
+  position:absolute;
+  height:100%;
+  width:100%;
+  background-image:conic-gradient(from var(--angle),transparent 70%,aqua);
+  top: 50%;
+  left:50%;
+  translate:-50% -50%;
+  z-index:-1;
+  padding:3px;
+  border-radius:10px;
+  animation:spin 3s linear infinite;
+}
+#getStartedButton::before{
+  filter: blur(1.5rem);
+}
+@keyframes spin{
+  from{
+    --angle:0deg;
+  }
+  to{
+    --angle:360deg;
+  }
+  
+}
+#getStartedButton:hover {
+  background-color: #e6e6e6;
+  transform: scale(1.05);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.contact-section{
+  width:400px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff5f49;
+  text-align: center;
+  
+  
+
+}
+
+
+#manoraj {
+  height: 300px;
+  width: 300px; /* Ensure width is set for a perfect box */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  text-align: center;
+  position: relative;
+  border-radius: 50%;
+}
+
+#manoraj::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid black;
+  border-top: 3px solid aqua;
+  border-radius: 50%;
+  animation: animate 5s  infinite;
+  pointer-events: none;
+}
+
+@keyframes animate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#sub{
+  height: 30px;
+  width: 70px;
+  border-radius: 5px;
+  margin-top: 30px;
+  background-color: transparent;
+  color: rgb(254, 253, 253);
+  border: 2px solid white;
+  font-size: 1rem;
+}
+
+#sub:hover{
+  background-color: rgb(64, 201, 64);
+  color:black;
+
+}
+
+#name,#email,#phone{
+
+  height:25px;
+  width:200px;
+  margin-top:20px;
+  text-align: center;
+  align-items:center;
+  justify-content: center;
+  font-size:15px;
+  background-color:white;
+  border-radius:20px;
+  border:2px solid white;
+  background-color: rgba(0,0,0,0.5)}
+#love{
+  color: rgb(44, 44, 43);
+}
+#name:hover{
+  background-color: aliceblue;
+}
+#phone:hover{
+  background-color: white;
+}
+#email:hover{
+  background-color: aliceblue;
+}
+.ppt{
+  height:300px;
+  width:100%;
+  border:2px solid black;
+  margin-top:-280px;
+  background-image: url('ppt5.jpg');
+  background-size: cover;
+  animation: binit 20s linear infinite;
+}
+
+
+
+@keyframes binit {
+   0% {
+       background-image: url("ppt5.jpg");
+   }
+   25% {
+       background-image: url("ppt4.jpg");
+   }
+   50% {
+    background-image: url("ppt3.jpg");
+}
+75% {
+  background-image: url("ppt2.jpg");
+}
+100% {
+  background-image: url("ppt1.jpg");
+}
+
+}
+
+#about{
+  background-image: url('backn.jpg');
+  background-size:cover;
+}
+
+
